@@ -1,0 +1,10 @@
+Account identifier: IGKMYEC-HJB94864
+Data sharing account identifier: IGKMYEC.HJB94864
+Organization name: IGKMYEC
+Account name: HJB94864
+Account/Server URL: IGKMYEC-HJB94864.snowflakecomputing.com
+Login name: FRANK.X.LIU@GMAIL.COM
+Role: ACCOUNTADMIN
+Account locator: SSB97490
+Cloud platform: AWS
+

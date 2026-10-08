@@ -1,0 +1,22 @@
+# Viewer build output
+web/node_modules/
+web/.next/
+web/next-env.d.ts
+web/tsconfig.tsbuildinfo
+
+# Local data — the MLS export is licensed data; never commit it
+data/
+*.csv.gz
+*.json.gz
+
+# Snowflake credentials — private keys and connection files stay in ~/.snowflake
+*.p8
+*.pem
+connections.toml
+config.toml
+.env
+
+# Python
+.venv/
+__pycache__/
+.ipynb_checkpoints/

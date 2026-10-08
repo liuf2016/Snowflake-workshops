@@ -1,0 +1,81 @@
+-- E1
+
+USE WAREHOUSE LEARN_WH;
+
+-- Switch role to SYSADMIN
+USE ROLE SYSADMIN;
+
+-- Create the main database as SYSADMIN
+CREATE DATABASE IF NOT EXISTS LEARN_DB
+COMMENT = 'Create database LEARN_DB as SYSADMIN';
+
+-- Create the RAW schema inside database LEARN_DB 
+CREATE SCHEMA IF NOT EXISTS LEARN_DB.RAW
+COMMENT = 'Create schema RAW inside database LEARN_DB';
+
+-- Create the STAGING schema inside database LEARN_DB 
+CREATE SCHEMA IF NOT EXISTS LEARN_DB.STAGING
+COMMENT = 'Create schema STAGING inside database LEARN_DB';
+
+-- Create the MARTS schema inside database LEARN_DB 
+CREATE SCHEMA IF NOT EXISTS LEARN_DB.MARTS
+COMMENT = 'Create schema MARTS inside database LEARN_DB';
+
+-- E2
+
+-- Create database BAY_AREA_CITIES inside LEARN_DB.STAGING to store cities
+CREATE TABLE IF NOT EXISTS LEARN_DB.STAGING.BAY_AREA_CITIES (
+  city VARCHAR, 
+  county VARCHAR, 
+  sample_zip VARCHAR(5)
+)
+COMMENT = 'Create table LEARN_DB.STAGING.BAY_AREA_CITIES to store cities';
+
+-- Insert five cities into table LEARN_DB.STAGING.BAY_AREA_CITIES to store them
+INSERT INTO LEARN_DB.STAGING.BAY_AREA_CITIES ( city, county, sample_zip )
+VALUES ( 'Palo Alto', 'Santa Clara', '94306' );
+INSERT INTO LEARN_DB.STAGING.BAY_AREA_CITIES ( city, county, sample_zip )
+VALUES ( 'Cupertino', 'Santa Clara', '95014' );
+INSERT INTO LEARN_DB.STAGING.BAY_AREA_CITIES ( city, county, sample_zip )
+VALUES ( 'Mountain View', 'Santa Clara', '94041' );
+INSERT INTO LEARN_DB.STAGING.BAY_AREA_CITIES ( city, county, sample_zip )
+VALUES ( 'San Jose', 'Santa Clara', '95131' );
+INSERT INTO LEARN_DB.STAGING.BAY_AREA_CITIES ( city, county, sample_zip )
+VALUES ( 'Sunnyvale', 'Santa Clara', '94087' );
+
+SELECT * FROM LEARN_DB.STAGING.BAY_AREA_CITIES;
+
+-- E3 Find out the database owner
+
+-- Look at the owner column
+SHOW DATABASES LIKE 'LEARN_DB';
+-- Answer to question (a): owner = SYSADMIN
+
+-- Or use INFORMATINO_SCHEMA to get the owner
+SELECT database_owner FROM INFORMATION_SCHEMA.DATABASES
+WHERE database_name = 'LEARN_DB';
+-- Answer to question (a): owner = SYSADMIN
+
+-- To find out the Time Travel retention time of a database
+SHOW PARAMETERS LIKE 'DATA_RETENTION_TIME_IN_DAYS' IN DATABASE LEARN_DB;
+-- Answer to (b): value 1
+
+SELECT COUNT(*) AS total_tables 
+FROM LEARN_DB.INFORMATION_SCHEMA.TABLES 
+WHERE TABLE_TYPE = 'BASE TABLE';
+
+
+-- View the owner property
+DESCRIBE DATABASE LEARN_DB;
+-- Answer to question (c): 5 objects (?) INFORMATION_SCHEMA, MARTS, PUBLIC, RAW, STAGING
+
+-- E4
+SELECT COUNT(*) FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS;
+
+-- First select all rows, then use COUNT() function
+SELECT COUNT(*) FROM learn_db.staging."MixedCase";
+
+-- E5
+
+
+-- E6

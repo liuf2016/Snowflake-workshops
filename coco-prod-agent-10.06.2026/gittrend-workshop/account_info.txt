@@ -1,0 +1,14 @@
+
+fliu123 / XingzhouLiu123
+------------------------
+Account identifier: NJCVYJV-VA09852 
+Data sharing account identifier: NJCVYJV.VA09852 
+Organization name: NJCVYJV 
+Account name: VA09852 
+Account/Server URL: NJCVYJV-VA09852.snowflakecomputing.com
+Login name: FLIU123 
+Role: ACCOUNTADMIN
+Account locator: IO77017 
+Cloud platform: AWS
+
+

@@ -1,0 +1,73 @@
+Build an AI agent in 60 min then expose via MCP
+From foundation to intelligence
+
+Build, Extend & Expose an AI agent w/ CoCO
+Richie Bachala etc - Solutions architecture
+Snowflake | Oct, 2026
+
+Cortex Code
+Working directory
+
+Schedule:
+Why CoCo
+
+
+The Mnetal Model
+- AGENTS.md -> Coco reads your context
+- CoCo - writes every SQL statement
+- Cortex AI -> search + complete + agent
+- MCP Server - exposes it to the world
+
+Today:
+create agent to analyze Gitbhu data
+
+The world is changing: Truly AI everywhere
+
+Guide an agent
+
+Slack, Mobile, Desktop, Snowflake
+
+General AI Tools weren't built for data teams
+
+They're coding-only, no concept of schemas, roles, warehouses, or governance policies, treat Snowflake like any other database
+
+Snowflake Desktop - no data leaves
+
+CoCO: the Data-Native Agent Harness
+
+Layer 1: Context (SnowScope)
+-0 Coco uses SnowScope: tuned to find the right table, semantic view, and thool before you aski
+
+Layer 2: Skills
+- Native dbt, Airlfow, and Databricks skills built into the harness
+- Fire at the right moment. No configuration needed
+
+Layyer 3:
+
+Opus  Coco
+
+Tonight:
+Foundataion
+- agents.md: persistent context file
+-Coco reads every session
+
+Gittrend_DB: 107M real GitHub events, S3
+
+Intelligence
+- v_trending
+
+Lets build
+
+http://bit.ly/441DbCC
+
+data in public S3 bucket
+
+load data into account, Cortext search, some analysis
+
+v1.1.104+041358.66de1c44636f
+
+% cortex --version 
+Cortex Code v1.1.104
+
+
+Exposes
